@@ -1,14 +1,16 @@
 <div class="col-md-11" style="text-align: center">
-  <h1 style="font-family: Lato sans-serif"><b>Welcome to Unsplash Api Consumer</b></h1>
+  <h1><b style="font-family: Lato-bold, sans-serif">Welcome to Unsplash Api Consumer</b></h1>
 </div>
 <div class="container">
   <div class="row">
     <div class="col-md-12" >
       <div class="col-md-3" style="border: solid 1px; background-color: lavender; min-height: 59px;">
-        <input id="seachInput" type="text" name="search" style="margin:10px; border-radius: 10px;"  value="" [(ngModel)]="keyword" (input)="searchUsers($event.target.value)" placeholder="Search">
+        <input id="seachInput" type="text" name="search" style="margin:10px;"  value="" [(ngModel)]="keyword" (input)="searchUsers($event.target.value)" placeholder="Search">
+       <br>
         <div *ngIf="result.length > 0 && keyword.length > 0">
+          <label style="color: firebrick">Users Found :</label>
           <div *ngFor="let user of result" style="margin-bottom: 10px; border-bottom: solid 1px">
-            <label style="font-family: Lato, sans-serif; color: red">Full Name: </label><h4 (click)="getUploadedPictures(user.photos)" style="font-family: font-family: Lato, sans-serif;">{{user.name}} </h4>
+           <h4 (click)="getUploadedPictures(user.photos)" ><b style="font-weight: normal; font-family: Lato-bold, sans-serif">{{user.name}}</b></h4>
             <div *ngFor="let photo of user.photos">
               <div>
               </div>
@@ -20,10 +22,10 @@
       <div class="vertical-devider" style="border-right: 1px dashed #333;">
       </div>
       <div class="col-md-8" style="border: solid 1px; background-color: lavender">
-        <h3 style="font-family: Lato, sans-serif">Photos Uploaded: </h3>
+        <h3><b>Uploaded: Photos</b></h3>
         <div *ngFor="let url of listPhotos">
           <div class="col-md-4">
-          <img src="{{url}}"  style="border-radius: 25px; margin-bottom: 10px;"/>
+          <img src="{{url}}"  style="margin: 10px; height: 150px; width: 150px;"/>
           </div>
         </div>
       </div>
