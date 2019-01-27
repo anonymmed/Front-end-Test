@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UnsplashService} from '../services/unsplash.service';
 import {FormsModule} from '@angular/forms';
-import {Users} from '../models/Users';
 import {forEach} from '@angular/router/src/utils/collection';
 
 @Component({
