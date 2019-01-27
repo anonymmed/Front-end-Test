@@ -15,7 +15,8 @@ export class UnsplashComponent implements OnInit {
   constructor(private unsplash: UnsplashService) { }
 
   searchUsers() {
-     this.unsplash.searchUsers(this.keyword).subscribe((data: any) => this.result = data.results);
+    this.listPhotos = [];
+    this.unsplash.searchUsers(this.keyword).subscribe((data: any) => this.result = data.results);
   }
   getUploadedPictures(photos: any[]) {
     this.listPhotos = [];
