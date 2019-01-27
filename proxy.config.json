@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "https://api.unsplash.com/search/",
+    "secure": true,
+    "changeOrigin": true
+  }
+}
