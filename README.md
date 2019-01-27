@@ -1,10 +1,19 @@
 # FrontEnd
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+It consists of searching for users on Unsplash
+using unsplash REST API and consulting their uploaded photos.
 
 ## Development server
+Quickstart
+First install the project dependencies:
+npm install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+then to start the project run :
+npm start
+Navigate to `http://localhost:4200/`.
+Want to help?
+contact: mohamed@pixelwilderness.com
 
 ## Code scaffolding
 
